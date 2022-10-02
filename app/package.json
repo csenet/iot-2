@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.30.0",
+    "ambient-lib": "^1.0.4",
+    "aws-iot-device-sdk": "^2.2.12",
+    "axios": "^0.27.2"
+  }
+}
