@@ -14,9 +14,9 @@ module.exports = class LightController {
     return this.apiCall(false);
   }
 
-  async apiCall(state){
+  async apiCall(state) {
     // state shoud be true or false
-    if(typeof(state) !== 'boolean') return;
+    if (typeof (state) !== 'boolean') return;
 
     var data = JSON.stringify({
       "shadow": {
@@ -27,17 +27,17 @@ module.exports = class LightController {
         }
       }
     });
-    
+
     var config = {
       method: 'post',
       url: `https://mdash.net/api/v2/devices/${this.deviceId}?access_token=${this.accessToken}`,
-      headers: { 
-        'User-Agent': 'stardustChrome', 
+      headers: {
+        'User-Agent': 'stardustChrome',
         'Content-Type': 'application/json'
       },
-      data : data
+      data: data
     };
-    
+
     return await axios(config);
   }
 }
